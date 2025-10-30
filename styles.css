@@ -292,3 +292,40 @@ footer {
         font-size: 2rem;
     }
 }
+
+/* ===== Ajuste no tamanho do controle de quantidade ===== */
+.produto-quantidade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    gap: 10px; /* espaço entre os botões e o input */
+}
+
+.btn-quantidade {
+    width: 48px; /* antes era 36px */
+    height: 48px; /* antes era 36px */
+    font-size: 1.4rem; /* texto maior */
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-quantidade:hover {
+    background-color: #e0e0e0;
+}
+
+.quantidade-input {
+    width: 70px; /* antes era 50px */
+    height: 48px; /* igual aos botões */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
