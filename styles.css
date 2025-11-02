@@ -331,6 +331,10 @@ footer {
 }
 
 img{
-    width: 120px;
+    width: 69px;
     height: auto;
+
+}
+h1 { font-size: 1.5rem; 
+    margin-bottom: 0.3rem; 
 }
