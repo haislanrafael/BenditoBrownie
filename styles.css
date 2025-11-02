@@ -1,10 +1,11 @@
 :root {
-    --cor-primaria: #5D4037;
-    --cor-secundaria: #8D6E63;
+    --cor-primaria:rgb(184, 57, 57)
+;
+    --cor-secundaria: #715043;
     --cor-terciaria: #D7CCC8;
     --cor-fundo: #EFEBE9;
     --cor-texto: #3E2723;
-    --cor-whatsapp: #25D366;
+    --cor-whatsapp: #2f5c84;
     --fonte-principal: 'Poppins', sans-serif;
 }
 
@@ -92,7 +93,7 @@ section {
 }
 
 .btn-whatsapp:hover {
-    background-color: #1da851;
+    background-color: #1d1da8;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -252,7 +253,7 @@ nav ul li a:hover {
 }
 
 .btn-pedido:hover {
-    background-color: #1da851;
+    background-color: #1e1eab;
 }
 
 /* Contato */
@@ -329,3 +330,7 @@ footer {
     font-size: 1.2rem;
 }
 
+img{
+    width: 120px;
+    height: auto;
+}

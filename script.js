@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const quantidade = card.querySelector('.quantidade-input').value;
 
             // Mensagem automática personalizada
-            let mensagem = `Olá, deu vontade de um Brownie da Bendito Brownie! Quero pedir ${quantidade} unidade(s) do ${nome}.`;
+            let mensagem = `Olá, deu vontade de um Bendito Brownie! Quero pedir ${quantidade} unidade(s) do ${nome}.`;
 
             if (ultimaLocalizacao) {
                 mensagem += `\n📍 Minha localização: ${ultimaLocalizacao}`;
