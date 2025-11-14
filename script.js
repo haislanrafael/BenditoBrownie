@@ -5,16 +5,20 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.btn-quantidade').forEach(botao => {
         botao.addEventListener('click', function() {
             const input = this.parentNode.querySelector('.quantidade-input');
-            let valor = parseInt(input.value);
+            let valor = parseInt(input.value, 10) || 1;
             if (this.classList.contains('mais') && valor < 20) valor++;
             if (this.classList.contains('menos') && valor > 1) valor--;
             input.value = valor;
         });
+
+        // melhorar a acessibilidade: permitir toque rápido sem delay
+        botao.addEventListener('touchstart', function() { /* noop */ }, {passive:true});
     });
 
-    // Armazenar localização opcional
+    // Armazenar localização opcional (se houver botão pra isso)
     let ultimaLocalizacao = '';
 
+    // (se houver botões .btn-localizacao no futuro)
     document.querySelectorAll('.btn-localizacao').forEach(botao => {
         botao.addEventListener('click', function() {
             if (!navigator.geolocation) {
@@ -34,14 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Botão de pedido
+    // Botão de pedido - monta mensagem automática com produto + quantidade
     document.querySelectorAll('.btn-pedido').forEach(botao => {
         botao.addEventListener('click', function() {
             const card = this.closest('.produto-card');
-            const nome = this.dataset.produto;
-            const quantidade = card.querySelector('.quantidade-input').value;
+            const nome = this.dataset.produto || 'produto';
+            const quantidade = card.querySelector('.quantidade-input').value || '1';
 
-            // Mensagem automática personalizada
             let mensagem = `Olá, deu vontade de um Bendito Brownie! Quero pedir ${quantidade} unidade(s) do ${nome}.`;
 
             if (ultimaLocalizacao) {
@@ -49,7 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
-            window.open(url, '_blank');
+
+            // abrir em nova aba/janela
+            window.open(url, '_blank', 'noopener,noreferrer');
         });
     });
 });

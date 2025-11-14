@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Delícia Brownie - Brownies Artesanais</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Fontes e ícones -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container header-row">
             <div class="logo">
                 <h1>Bendito Brownie</h1>
                 <p>feito com amor e paixão</p>
-                
             </div>
-            <div>
+
+            <!-- logo imagem (se tiver) -->
+            <div class="logo-img">
                 <img src="logo.png" alt="Logo Bendito Brownie & Cacau">
             </div>
-            <nav>
+
+            <nav class="main-nav">
                 <ul>
                     <li><a href="#produtos">Produtos</a></li>
                     <li><a href="#sobre">Sobre Nós</a></li>
@@ -47,23 +52,23 @@
     <section id="produtos" class="produtos">
         <div class="container">
             <h2>Nossos Brownies</h2>
-            
+
             <div class="produtos-grid">
 
                 <!-- Brownie Tradicional -->
                 <div class="produto-card">
                     <div class="produto-imagem">
-                          <img src="https://i.pinimg.com/1200x/c9/c0/d2/c9c0d2012d00803b0e01e82d62cfe17c.jpg" alt="Brownie Tradicional">
+                        <img src="https://i.pinimg.com/1200x/c9/c0/d2/c9c0d2012d00803b0e01e82d62cfe17c.jpg" alt="Brownie Tradicional">
                     </div>
                     <div class="produto-info">
                         <h3>Brownie Tradicional</h3>
-                        <h4>R$ 8,90</h4>
+                        <h4>R$ 10,00</h4>
                         <p>Nosso clássico brownie de chocolate nobre , com textura macia por dentro e crocante por fora.</p>
 
                         <div class="produto-quantidade">
-                            <button class="btn-quantidade menos">-</button>
-                            <input type="text" class="quantidade-input" value="1" readonly>
-                            <button class="btn-quantidade mais">+</button>
+                            <button class="btn-quantidade menos" aria-label="Diminuir quantidade">-</button>
+                            <input type="text" class="quantidade-input" value="1" readonly aria-label="Quantidade">
+                            <button class="btn-quantidade mais" aria-label="Aumentar quantidade">+</button>
                         </div>
 
                         <button class="btn-pedido" data-produto="Brownie Tradicional">Fazer Pedido</button>
@@ -73,17 +78,17 @@
                 <!-- Brownie com Nozes -->
                 <div class="produto-card">
                     <div class="produto-imagem">
-                        <img src="https://i.pinimg.com/1200x/a0/90/76/a09076501665efe8b79c71b68618f8f6.jpg" alt="Brownie de Nutella">
+                        <img src="https://i.pinimg.com/1200x/a0/90/76/a09076501665efe8b79c71b68618f8f6.jpg" alt="Brownie com Nozes">
                     </div>
                     <div class="produto-info">
                         <h3>Brownie com Nozes</h3>
-                        <h4>R$ 9,00</h4>
+                        <h4>R$ 11,00</h4>
                         <p>Brownie de chocolate nobre com pedacinhos crocantes de nozes — sabor clássico e irresistível.</p>
 
                         <div class="produto-quantidade">
-                            <button class="btn-quantidade menos">-</button>
-                            <input type="text" class="quantidade-input" value="1" readonly>
-                            <button class="btn-quantidade mais">+</button>
+                            <button class="btn-quantidade menos" aria-label="Diminuir quantidade">-</button>
+                            <input type="text" class="quantidade-input" value="1" readonly aria-label="Quantidade">
+                            <button class="btn-quantidade mais" aria-label="Aumentar quantidade">+</button>
                         </div>
 
                         <button class="btn-pedido" data-produto="Brownie com Nozes">Fazer Pedido</button>
@@ -97,20 +102,38 @@
                     </div>
                     <div class="produto-info">
                         <h3>Brownie de Nutella</h3>
-                        <h4>R$ 13,00</h4>
+                        <h4>R$ 14,00</h4>
                         <p>Irresistível brownie com camadas de nutella, uma combinação perfeita.</p>
 
                         <div class="produto-quantidade">
-                            <button class="btn-quantidade menos">-</button>
-                            <input type="text" class="quantidade-input" value="1" readonly>
-                            <button class="btn-quantidade mais">+</button>
+                            <button class="btn-quantidade menos" aria-label="Diminuir quantidade">-</button>
+                            <input type="text" class="quantidade-input" value="1" readonly aria-label="Quantidade">
+                            <button class="btn-quantidade mais" aria-label="Aumentar quantidade">+</button>
                         </div>
 
                         <button class="btn-pedido" data-produto="Brownie de Nutella">Fazer Pedido</button>
                     </div>
                 </div>
 
-                
+                <!-- Brownie de Ninho -->
+                <div class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="https://i.pinimg.com/736x/a7/3d/67/a73d67b9a96fb2ca86ce43eb41d1ded2.jpg" alt="Brownie de Ninho">
+                    </div>
+                    <div class="produto-info">
+                        <h3>Brownie de Ninho</h3>
+                        <h4>R$ 14,00</h4>
+                        <p>Irresistível brownie com camadas de ninho, uma combinação perfeita.</p>
+
+                        <div class="produto-quantidade">
+                            <button class="btn-quantidade menos" aria-label="Diminuir quantidade">-</button>
+                            <input type="text" class="quantidade-input" value="1" readonly aria-label="Quantidade">
+                            <button class="btn-quantidade mais" aria-label="Aumentar quantidade">+</button>
+                        </div>
+
+                        <button class="btn-pedido" data-produto="Brownie de ninho">Fazer Pedido</button>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -120,7 +143,7 @@
         <div class="container">
             <h2>Entre em Contato</h2>
             <p>Encomendas especiais, dúvidas ou sugestões? Fale conosco!</p>
-            <a href="https://wa.me/5541998278767" class="btn-whatsapp">
+            <a href="https://wa.me/5541998278767" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i> Fale pelo WhatsApp
             </a>
         </div>
