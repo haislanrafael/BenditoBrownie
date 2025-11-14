@@ -1,6 +1,5 @@
 :root {
-    --cor-primaria:rgb(184, 57, 57)
-;
+    --cor-primaria:rgb(184, 57, 57);
     --cor-secundaria: #715043;
     --cor-terciaria: #D7CCC8;
     --cor-fundo: #EFEBE9;
@@ -337,4 +336,3 @@ img{
     height: auto;
 
 }
-
